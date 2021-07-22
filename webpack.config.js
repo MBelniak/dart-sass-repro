@@ -17,22 +17,7 @@ module.exports = () => {
         null,
         2
     )})`;
-    plugins: [
-        isProduction &&
-          new MiniCssExtractPlugin({
-            filename: "assets/css/[name].[contenthash:8].css",
-            chunkFilename: "assets/css/[name].[contenthash:8].chunk.css"
-          }),
-        new HtmlWebpackPlugin({
-          template: path.resolve(__dirname, "public/index.html"),
-          inject: true
-        }),
-        new webpack.DefinePlugin({
-          "process.env.NODE_ENV": JSON.stringify(
-            isProduction ? "production" : "development"
-          )
-        })
-      ].filter(Boolean),
+
     return {
         mode: env.production ? 'production' : 'development',
         target: 'web',
