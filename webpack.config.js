@@ -1,10 +1,10 @@
 const path = require('path');
-const customerDirectoryInSourcesSassImporter = require('./lib/customer-directory-in-sources-resolver');
-const resolverPath = path.resolve(__dirname, 'lib/customer-directory-in-sources-resolver.js');
+const customDirectorySassImporter = require('./lib/customDirectorySassImporter');
+const resolverPath = path.resolve(__dirname, 'lib/customDirectorySassImporter.js');
 
 module.exports = () => {
     const env = process.env;
-    const importer = customerDirectoryInSourcesSassImporter({
+    const importer = customDirectorySassImporter({
         cssDir: env.CSSDIRNAME,
         rootDirectory: path.resolve(__dirname, "src")
     });
