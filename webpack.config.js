@@ -67,6 +67,7 @@ module.exports = () => {
                         {
                             loader: 'sass-loader',
                             options: {
+                                implementation: require("sass"), // just to make sure :p
                                 sassOptions: {
                                     importer
                                 }
