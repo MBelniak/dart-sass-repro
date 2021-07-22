@@ -12,9 +12,9 @@ src/App.jsx imports css/styles.scss file. This file imports ./colors.scss. If th
 yarn
 // build with blue color
 yarn build
-// Go to dist/app.js, find 'color: blue' in eval of "./src/css/styles.scss"
+// Go to dist/app.js, find 'color: blue' and 'font-size: 50px in eval of "./src/css/styles.scss"
 
 // build with red color
 yarn build-red-color
-// Go to dist/app.js, find 'color: red' in eval of "./src/css/styles.scss"
+// Go to dist/app.js, find 'color: red' and 'font-size: 10px' in eval of "./src/css/styles.scss"
 ```
