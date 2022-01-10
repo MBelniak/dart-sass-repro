@@ -13,4 +13,4 @@ npm install
 npm run build
 ```
 
-In the console there's only 'Importer received: missing', there is no 'Importer received: exists', so the importer is not called for existing file.
+In the console there's only 'Importer received: missing', there is no 'Importer received: missing', so the importer is not called for existing file.
