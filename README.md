@@ -1,20 +1,16 @@
 # dart-sass-repro
 
-In the 'main' branch is a reproduction using node-sass.
+In the 'main' branch there's a reproduction using node-sass.
 In the 'with-dart-sass' there's a reproduction using dart-sass.
+In the 'minimal-repro' branch there's a minimal repro code.
 
 ## How to reproduce?
 
-src/App.jsx imports css/styles.scss file. This file imports ./colors.scss. If the env variable CSSDIRNAME is set to 'red-color', the imported 'colors.scss' should be taken from `css/red-color` instead.
-
+Clone the repo, then
 ```
-// install dependencies
-yarn
-// build with blue color
-yarn build
-// Go to dist/app.js, find 'color: blue' and 'font-size: 50px in eval of "./src/css/styles.scss"
-
-// build with red color
-yarn build-red-color
-// Go to dist/app.js, find 'color: red' and 'font-size: 10px' in eval of "./src/css/styles.scss"
+git checkout minimal-repro
+npm install 
+npm run build
 ```
+
+In the console there's only 'Importer received: missing', there is no 'Importer received: exists', so the importer is not called for existing file.
